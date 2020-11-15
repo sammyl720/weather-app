@@ -12,7 +12,8 @@ const WeatherDataCard = ({ weatherData, zipcode }) => {
     removeZipcode(zipcode)
   }
   return (
-      <Card addClasses='p-2 bordered centered m-2 fill classic'>
+      <div className={classes.wrapper + ' fill'}>
+        <Card addClasses='p-2 bordered centered m-2 fill classic'>
         <span className={classes.delete} onClick={() => {
           removeCity()
         }}>X</span>
@@ -22,6 +23,7 @@ const WeatherDataCard = ({ weatherData, zipcode }) => {
         <p>{weatherData.current?.condition.text}</p>
         <Avatar imgUrl={weatherData.current?.condition.icon} size='lg' addClasses='m-2'></Avatar>
       </Card>
+      </div>
   )
 }
 

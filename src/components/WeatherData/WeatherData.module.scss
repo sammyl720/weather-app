@@ -6,3 +6,18 @@
   font-weight: bold;
   color: #8f888a;
 }
+
+.wrapper{
+  animation: fadeIn 500ms ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
