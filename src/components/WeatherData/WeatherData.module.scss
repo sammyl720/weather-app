@@ -4,13 +4,22 @@
   top:8px;
   font-size: 1rem;
   font-weight: bold;
-  color: #8f888a;
+
 }
 
 .wrapper{
   animation: fadeIn 500ms ease-in-out;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.wrapper > div {
+  width: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 10px;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;

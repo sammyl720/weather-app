@@ -12,8 +12,8 @@ const WeatherDataCard = ({ weatherData, zipcode }) => {
     removeZipcode(zipcode)
   }
   return (
-      <div className={classes.wrapper + ' fill'}>
-        <Card addClasses='p-2 bordered centered m-2 fill classic'>
+      <div className={classes.wrapper}>
+        <Card addClasses='p-1 bordered centered m-1 fill classic'>
         <span className={classes.delete} onClick={() => {
           removeCity()
         }}>X</span>

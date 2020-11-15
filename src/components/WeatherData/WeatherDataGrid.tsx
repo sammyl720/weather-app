@@ -34,7 +34,7 @@ const WeatherDataGrid = () => {
     )
   })
   return (
-    <Grid gap='sm' cols='1'>
+    <Grid cols='1'>
       {weatherCards}
     </Grid>
   )
