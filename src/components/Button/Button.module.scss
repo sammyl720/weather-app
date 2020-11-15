@@ -1,0 +1,65 @@
+@import '../../sass/colors';
+.btn {
+  display: inline-block;
+  border: none;
+  margin: 1rem auto; 
+  color:white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn.sm {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.btn.md {
+  padding: 9px 18px;
+  font-size: 16px;
+}
+.btn.lg {
+  padding: 14px 28px;
+  font-size: 20px;
+}
+.btn.xl {
+  padding: 20px 40px;
+  font-size: 24px;
+}
+.btn.block {
+  width: 100%;
+}
+.btn.primary {
+  background: $primary;
+  border: 2px solid $primary;
+  
+}
+
+.btn.secondary {
+  background: $secondary;
+  border: 2px solid $secondary;
+  
+}
+.btn.success {
+  background: $success;
+  border: 2px solid $success;
+  
+}
+.btn.warning {
+  background: $warning;
+  border: 2px solid #d7385e;
+  
+}
+.btn.danger {
+  background:$danger;
+  border: 2px solid $danger;
+  
+}
+
+.btn:hover {
+  opacity: 0.95;
+  transform: scale(.95);
+}

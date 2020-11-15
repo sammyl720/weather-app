@@ -1,0 +1,73 @@
+@import '../../sass/colors';
+.wrapper {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid lighten($color: $primary, $amount: 40%);
+  border-radius: 5px;
+  font-size: 18px;
+  position: relative;
+  margin: .5rem;
+}
+
+
+
+.wrapper[data-focused=true] {  
+  border: 2px solid $primary;
+}
+
+.wrapper.secondary {
+  border: 2px solid lighten($color: $secondary, $amount: 60%);
+
+}
+.wrapper[data-focused=true].secondary {  
+  border: 2px solid $secondary;
+}
+
+.wrapper.success {
+  border: 2px solid lighten($color: $success, $amount: 40%);
+
+}
+.wrapper[data-focused=true].success{  
+  border: 2px solid $success;
+}
+.wrapper.warning {
+  border: 2px solid lighten($color: $warning, $amount: 40%);
+
+}
+.wrapper[data-focused=true].warning {  
+  border: 2px solid $warning;
+}
+
+.wrapper.danger {
+  border: 2px solid lighten($color: $danger, $amount: 40%);
+
+}
+.wrapper[data-focused=true].danger {  
+  border: 2px solid $danger;
+}
+.input {
+  color:  $primary;
+  outline: none;
+  border:none;
+  margin-left: .5rem;
+  z-index: 200;
+  flex-grow:1;
+}
+.label {
+  font-weight: bold;
+}
+.primary > .label {
+  color:$primary;
+} 
+.success > .label {
+  color: $success
+}
+.secondary > .label {
+  color: $secondary
+}
+.warning > .label {
+  color: $warning
+}
+.danger > .label {
+  color: $danger
+}

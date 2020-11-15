@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap');
+@import './sass/colors';
+@import './sass/animations';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a, *.hyperlink {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+a:hover, *.hyperlink:hover {
+  opacity: 0.8;
+}
+a:hover::after, *.hyperlink:hover::after {
+  content: '';
+  position: absolute;
+  bottom:-3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: currentColor;
+  animation: expand 300ms ease-in forwards;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+.bordered{
+  border:1px dotted currentColor;
+  border-radius: 5%;
+}
+
+.fill {
+  width: 80%;
+  max-width: 600px;
+  margin:5px auto;
+}
+.centered {
+  text-align: center;
+  margin: 0 auto;
+  align-self: center;
+  justify-self: center;
+}
+
+@for $i from 1 through 5 {
+  $size: ($i/2) * 16 +px;
+  .m-#{$i} { margin:$size ; }
+  .my-#{$i} { 
+    margin-top:$size ; 
+    margin-bottom:$size ; 
+  }
+  .mx-#{$i} { 
+    margin-left:$size ; 
+    margin-right:$size ; 
+  }
+  .mr-#{$i} { 
+    margin-right:$size ; 
+  }
+  .ml-#{$i} { 
+    margin-left:$size ; 
+  }
+
+  .p-#{$i} { padding:$size ; }
+  .py-#{$i} { 
+    padding-top:$size ; 
+    padding-bottom:$size ; 
+  }
+  .px-#{$i} { 
+    padding-left:$size ; 
+    padding-right:$size ; 
+  }
+  .pr-#{$i} { 
+    padding-right:$size ; 
+  }
+  .pl-#{$i} { 
+    padding-left:$size ; 
+  }
+}
+
+@media(max-width: 720px) {
+   * > .flex-control{
+    display: flex;
+  }
+}
+@keyframes expand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

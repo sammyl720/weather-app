@@ -1,0 +1,16 @@
+$primary: #2d6187;
+$secondary: #007a6a;
+$success: #41aea9;
+$warning: #ee6f57;
+$danger: #b83b5e;
+$classic: #14274e;
+$light: #cfe6e6;
+
+$colors: ('light': $light,"primary": $primary, "secondary": $secondary, "success": $success, "danger": $danger, "warning": $warning, "classic": $classic );
+@each $color, $value in $colors {
+  .#{$color} {
+    background-color: $value;
+    color: lighten($color: $value, $amount: 100);
+    
+  }
+}

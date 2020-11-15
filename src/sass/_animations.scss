@@ -1,0 +1,63 @@
+// Animations 
+$durations: 200, 400, 600, 800, 1000;
+
+@each $duration in $durations {
+  .fadeIn-#{$duration}{
+    animation: fadeIn #{$duration}ms ease-in;
+  }
+  .slideInFromLeft-#{$duration}{
+    animation: slideInFromLeft #{$duration}ms ease-in;
+  }
+  .slideInFromRight-#{$duration}{
+    animation: slideInFromRight #{$duration}ms ease-in;
+  }
+  .slideInFromTop-#{$duration}{
+    animation: slideInFromTop #{$duration}ms ease-in;
+  }
+  .slideInFromBottom-#{$duration}{
+    animation: slideInFromBottom #{$duration}ms ease-in;
+  }
+}
+
+// Keyframes
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromBottom {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
