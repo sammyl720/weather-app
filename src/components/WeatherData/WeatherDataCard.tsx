@@ -16,11 +16,11 @@ const WeatherDataCard = ({ weatherData, zipcode }) => {
         <span className={classes.delete} onClick={() => {
           removeCity()
         }}>X</span>
-        <h3 style={{ fontSize: '2rem'}}>{weatherData.data.location.name}</h3>
-        <h5>{weatherData.data.location.region}</h5>
-        <h2>{weatherData.data.current.temperature}&deg;</h2>
-        <p>{weatherData.data.current?.weather_descriptions[0]}</p>
-        <Avatar imgUrl={weatherData.data.current?.weather_icons[0]} size='lg' addClasses='m-2'></Avatar>
+        <h3 style={{ fontSize: '2rem'}}>{weatherData.location.name}</h3>
+        <h5>{weatherData.location.region}</h5>
+        <h2>{weatherData.current.temp_f}&deg;</h2>
+        <p>{weatherData.current?.condition.text}</p>
+        <Avatar imgUrl={weatherData.current?.condition.icon} size='lg' addClasses='m-2'></Avatar>
       </Card>
   )
 }

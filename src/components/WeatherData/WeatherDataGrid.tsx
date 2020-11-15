@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
-import { RootObject } from '../../api/WeatherStackTypes'
+import { RootObject } from '../../api/WeatherAPI'
 import LocationContext from '../../context/locationContext/LocationContext'
 import fetchZip from '../../utils/CoordsToZip'
 import locationCallPromise from '../../utils/GeoLocation'
@@ -30,7 +30,7 @@ const WeatherDataGrid = () => {
   }, [locations])
   const weatherCards = weatherData.map((weatherData, index) => {
     return (
-      <WeatherDataCard key={weatherData.data.location.lat} weatherData={weatherData} zipcode={locations[index]} />
+      <WeatherDataCard key={weatherData.location.lat} weatherData={weatherData} zipcode={locations[index]} />
     )
   })
   return (

@@ -1,6 +1,6 @@
 import React, { useReducer } from 'react'
 import retrieveWeatherData from '../../api/WeatherStack'
-import { RootObject } from '../../api/WeatherStackTypes'
+import { RootObject } from '../../api/WeatherAPI'
 import LocationContext from './LocationContext'
 import LocationReducer from './LocationReducer'
 const LocationProvider = ({ children }) => {
@@ -23,8 +23,13 @@ const LocationProvider = ({ children }) => {
     let weatherDataList: RootObject[] = []
     try {
       weatherDataList = await Promise.all(locations.map(async (zip): Promise<RootObject> => {
-        const result = await retrieveWeatherData(zip)
-        return result
+        try {
+          const result = await retrieveWeatherData(zip)
+          return result
+        } catch (error) {
+          const result = await retrieveWeatherData('90209')
+          return result
+        }
       }))
       return weatherDataList
     } catch (error) {

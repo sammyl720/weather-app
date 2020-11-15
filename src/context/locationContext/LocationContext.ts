@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import { RootObject } from '../../api/WeatherStackTypes'
+import { RootObject } from '../../api/WeatherAPI'
 
 const LocationContext = createContext<{ removeZipcode: (zip:string) => void, greet: string, locations: string[], loading: boolean
   , getLocationsWeather: (locations: string[]) => RootObject[], addZipcode: (zip: string) => void 
